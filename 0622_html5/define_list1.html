@@ -1,0 +1,84 @@
+<!-- 정의형 목록 태그 공부 -->
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <title>정의형목록태그</title>
+    </head>
+    <body>
+        <h1>정의형목록</h1>
+        <p>dl(틀) dt(제목) dd(내용)</p>
+        <dl><!-- 1번째 응용케이스 -->
+            <dt>제목</dt>
+            <dd>내용</dd>
+            <dd>내용</dd>
+            <dd>내용</dd>
+        </dl>
+        <dl><!-- 2번째 응용케이스 -->
+            <dt>제목</dt>
+            <dd>내용</dd>
+            <dd>내용</dd>
+            <dt>제목</dt>
+            <dd>내용</dd>
+        </dl>
+        <dl><!-- 2번째 응용케이스 --> <!-- 잘못된 케이스 제목과 내용은 1:1이다 내용이2개인건 ㄱㅊ -->
+            <dt>제목1</dt>
+            <dt>제목2</dt>
+            <dd>내용</dd>
+        </dl>
+        <hr>
+        <h1>theninemall 쇼핑몰 상품주문영역 연습</h1>
+        <dl>
+            <dt>상품명</dt>
+            <dd><h1>[아크릴스마트톡]gummys fresh market</h1></dd>
+            <dt>정상가</dt>
+            <dd><del>15,900원</del></dd>
+            <dt>할인가</dt>
+            <dd><em>9,800원</em><span>(6,100원 할인)</span></dd>
+            <dt>배송비</dt>
+            <dd><span>2,500원</span><em>20,000원이상 구매 시 무료</em></dd>
+        </dl>
+        <hr>
+        <h1>아이디어스 상품 주문영역</h1>
+        <div class="order">
+            <h2><em>클라인플로즈</em></h2>
+            <dl><!-- 상품명/할인율/가격 -->
+                <dt>엘리시아 패브릭포스터 달력 집꾸미기 내방꾸미기</dt>
+                <dd><h3><em>34%</em></h3></dd>
+                <dd><h3><em>14,900원</em><del>22,500원</del></h3></dd>
+            </dl>
+            <ul> <!-- 하트,공유,구매 아이콘 -->
+                <li>
+                    <span>4,257아이콘</span>
+                    <span>공유하기아이콘</span>
+                    <span><em>1,073명 구매</em></span>
+                </li>
+            </ul>
+            <dl><!-- 적립금/구매후기/배송비/배송시작/결제혜택/수량 -->
+                <dt>적립금</dt>
+                <dd><span>최대223p</span></dd>
+                <dt>구매후기</dt>
+                <dd><span>219</span></dd>
+                <dt>배송비</dt>
+                <dd><em>2,990원</em><span>(100,000원 이상 무료배송)</span></dd>
+                <dt>결제혜택</dt>
+                <dd><strong>KB페이</strong><em>5만원 이상 3천원 즉시할인</em></dd>
+                <dd><strong>KB페이, 토스페이, 네이버페이</strong></dd>
+                <dt>수량</dt>
+                <dd>주문시 제작</dd>
+            </dl>
+            <p>옵션선택이미지바</p>
+        </div>
+        <ul> <!-- 하트,공유,구매 아이콘 -->
+            <li>
+                <span>4,257아이콘</span>
+                <span>공유하기아이콘</span>
+                <span><em>1,073명 구매</em></span>
+            </li>
+        </ul>
+    </body>
+</html>
+
+<!-- 적립금/구매후기/배송비/배송시작/결제혜택/수량 -->
