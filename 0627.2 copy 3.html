@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Document</title>
+    <style>
+        table {width: 100%; border: 1px solid #444444;}th, td {border: 1px solid #444444;}
+    </style>
+</head>
+<body>
+    <h1>로그인</h1>
+    <!-- foem+table함께 쓰일 경우는 반드시 form먼저 작성후 form의
+    자식으로 table을 구성해야한다. -->
+    <form action="#" method="post">
+        <fieldset>
+            <legend>MemberLogin</legend>
+            <div class="login">
+                <span>비회원이신 분은 아래 회원가입을 이용 바랍니다.</span>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <th scope="col">아이디</th>
+                        <td><input type="text"></td>
+                        <td rowspan="6"><button type="submit">로그인</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="col">비밀번호</th>
+                        <td><input type="password"></td>
+                        <!-- <td scope="col">6</td> -->
+                    </tr>
+                </tbody>
+            </table>
+                    <div class="btn"><!-- 회원가입버튼, 아이디비밀번호찾기-->
+                        <button type="submit">회원가입</button>
+                        <button type="fine">아이디,비밀번호찾기</button>
+                    </div>
+        </fieldset>
+    </form>
+</body>
+</html>
