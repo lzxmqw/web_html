@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content=""> 
+    <meta name="desciption" content=""> 
+    <title>0626과제</title>
+    <style>
+        table, table * {border:2px solid black;}
+    </style>
+</head>
+<body>
+    <table>
+        <thead> <!-- 제목행그룹 -->
+            <tr> <!-- 행 -->
+                <th scope="col">상품(코드)</th> <!-- scope=col 세로방향으로 읽는 코드가있다. -->
+                <th scope="col">단가</th>
+                <th scope="col">수량</th>
+                <th scope="col">금액</th>
+            </tr>
+        </thead>
+        <tfoot>장애인들을 위해서는 결과를 티헤드 아래에 바로 진행한다행.
+            <tr><!-- 행 -->
+                <!-- 다른 행기준 총4개의 열이 결과행에선
+                2개의 열이 되므로 총액 열을 3칸 차지하도록 colspan=3적용해서 3+1=>4c총개수와 맞도록
+                설정 -->
+                <th scop="row" colspan="3">총액</th>
+                <td>10,200</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <th scope="row">001굿모닝우유 900ML</th>
+                <td scope="row">1,350</td>
+                <td>1</td>
+                <td>1,350</td>
+            </tr>
+            <tr>
+                <th>001양파</th>
+                <td>3,300</td>
+                <td>2</td>
+                <td>6,600</td>
+            </tr>
+            <tr>
+                <th>003<em>무</em></th>
+                <td>500</td>
+                <td>3</td>
+                <td>1,500</td>
+            </tr>
+            <tr>
+                <th>004<em>깻잎</em></th>
+                <td>750</td>
+                <td>1</td>
+                <td>750</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
