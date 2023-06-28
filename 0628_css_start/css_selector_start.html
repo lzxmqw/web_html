@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 작성연습</title>
+    <!-- 외부스타일시트(css파일 별도분리) -->
+    <link href="./reset.css" rel="stylesheet">
+    <!--  -->
+    <style>
+        /*선택자{속성:값;}*/
+        /*block tag 기본너비100%*/
+        /*inline tag 내용만큼 너비인식*/
+        /* 우선순위태그 : inline> id(#들어가야함) > class(.들어가야함) > tag */
+        /* h1 {background-color:aqua;} */
+        h1 {background-color:aqua;}
+        span{background-color:yellow;}
+        .test_box {background-color: lime;}
+        #titlel1 {background-color: coral;}/* 가장마지막에 선언된게 덮어쓰기하기도함 클래스냐, 아이디냐에따라 우선순위가생김 */
+        #titlel2 {background-color: pink;}
+        code.test1 {background-color: blueviolet;}
+        p.test1 {background-color: blue;}
+        .test_box >p {background-color: chocolate;}/* test_box의 자식은p = >꺽세들어가면 입력됨 */
+
+        header{background-color: black;}
+        header h1 {background-color:slategray}
+        header form{background-color:darkgreen} /* 헤더밑에 h1도있지만 형제관계이기때문에 패스 */
+        header form input{background-color: beige;}
+        header a{background-color: brown;}
+        .box .contents h2+p{background-color: cadetblue;} /* 클레스박스안에 컨텐츠안에 h2와p를 선택하겠다. */
+        .box .contents p{background-color: rgb(179, 179, 179);}
+        .box .contents h2~p{font-size: 30px;} /* ~은 이안에 있는 모든형제를 잡겠다라는 마인드~ */
+
+        .box a span,
+        .box .contents h2 {background-color: deeppink;}
+        /* #t tbody tr td, */
+        /* #t tfoot tr td em{...} */
+        /* 우선순위태그 : inline> id(#들어가야함) > class(.들어가야함) > tag */
+    </style>
+</head>
+<body>
+    <!-- inline styel == HTML내 작성css -->
+    <h1 style="background-color: gray;">ver0</h1>
+    <!-- h1 > em { background-color:yellow; }자식em을 선택한다 -->
+    <div class="test_box"><!-- p의자식은7개 -->
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h1 id="title1">h1-id</h1>
+        <h2 id="title2">h2-id</h2>
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+        <blockquote cite="#">blockquote</blockquote>
+        <p><span>span</span></p>
+        <p><q cite="#">q</q></p>
+        <p><code class="test1">code</code></p>
+        <p><sup>sup</sup><br><sub>sub</sub></p>
+        <div class="test1">test1-div</div>
+        <div class="test2">test2-div</div>
+        <div class="test3 test">test3-div</div>
+        <div class="test4 test">test4-div</div>
+        <div id="wrap"><p>wrap-div</p><!-- 얘는 자손 --></div>
+    </div>
+    <hr>
+    <h1>ver1</h1>
+    <header>
+        <h1>logo</h1>
+        <form action="#">
+            <input type="text" name="id">
+            <input type="text" name="pw">
+        </form>
+        <a href="#">lnb</a>
+    </header>
+    <hr>
+    <h1>ver2</h1>
+    <div class="box">
+        <a href="#"><span>link</span></a>
+        <div class="contents"><!-- alt+위아래방향키하면 코드를 옮길수있다. -->
+            <p>contents3</p>
+            <h2>title</h2>
+            <p>contents1</p>
+            <p>contents2</p>
+        </div>
+        <div class="img"><img src="#" alt=""></div>
+    </div>
+    <hr>
+    <h1>ver3</h1>
+    <main>
+        <aside>
+            <h2>title</h2>
+            <ul>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li class="last"><a href="#">menu4</a></li>
+            </ul>
+        </aside>
+        <section>
+            <div class="top">
+                <h1>main_title</h1>
+                <p>path</p>
+            </div>
+            <article>
+                <p>contents</p>
+            </article>
+        </section>
+    </main>
+    <hr>
+    <h1>ver4</h1>
+    <table id="t">
+        <thead>
+            <tr>
+                <th>title1</th>
+                <th>title2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>cell1</td>
+                <td><span>cell2</span></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>total</th>
+                <td><em>cell</em></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
