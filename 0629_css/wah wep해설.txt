@@ -1,0 +1,22 @@
+main 
+main #title_path
+main #title_path h1
+main #title_path .bread_crumbs
+main #title_path .bread_crumbs img
+main #title_path .bread_crumbs em
+
+main #contents
+main #contents h2
+main #contents h2 img
+main #contents h2 span
+main #contents .first
+main #contents p
+
+<나온 공식들>
+float (같은 부모 안 형제태그 기준 좌우배치 레이아웃)
+padding ((-left, right px단위): wpx hpx xpx;,) 
+background (-image, repeat, position(%),)
+font (-size, weight,)
+letter-spacing (자간)
+line-height (행간)
+color:

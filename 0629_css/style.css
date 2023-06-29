@@ -1,0 +1,38 @@
+main {
+    background-color: gray;
+    width: 1000px;
+    border:1px solid #dcdcdc;
+    margin:0 auto; /* 레이아웃가운데 배치 */
+}
+main #title_path {
+    background-color: orange;
+    border-bottom:1px solid #dcdcdc;
+    height:60px; /* block의 기본너비값은 100%이므로 부모와 동일한 크기를 가질 땐 별도의 width값을
+    안적어도 된다 */
+}
+main #title_path h1 {
+    background-color: yellow;
+    font-family:'Noto Sans KR', sans-serif;
+    /* 사용자 컴퓨터 글꼴설치유무 상관없이 글꼴보이게 하는법 */
+    /* 
+    0.font-family:'메인글꼴',메인글꼴에 문제가 생길 시 보이는 후보글꼴;
+    예시)노토산스글씨체가없으면 신세리프글씨체로 보이게 해라.라는뜻.
+
+    1. 구글 웹 서버에서 제공하는 웹주소로 된 글꼴을 가져온다.
+    (1)단점 구글에서 가져오는것이기때문에 글꼴이 한정적이다. 
+    
+    2. 글꼴설치파일을 웹제작폴더 내에 첨부해서 연결한다.
+    (1) 글꼴이 한정적이지 않지만 용량이 커지고, 번거로울수있다.
+    */
+}
+main #title_path p .bread_crumbs {background-color: greenyellow;}
+main #title_path p .bread_crumbs .img {background-color: green;}
+main #title_path p .bread_crumbs em {background-color: blue;}
+main #contents {background-color: purple;}
+main #contents h2 {background-color: palegreen;}
+main #contents h2 img{background-color: peachpuff;}
+main #contents h2 .span {background-color: plum;}
+main #contents .first {background-color: gray;}
+main #contents .first em {background-color: sandybrown;}
+main #contents .first p {background-color: cornflowerblue;}
+main #contents .first .href {background-color: wheat;}
