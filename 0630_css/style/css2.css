@@ -1,0 +1,34 @@
+main {
+    background-color: rgba(0,0,0,0.8);
+} /* t선택자에서 스페이스바 한번누르면 자식과 자손이 됨 */
+main .box {
+    width:200px; height:200px;
+    font-size:4rem;
+    border:5px dotted #fff;
+    border-radius:50%; /* 네모칸에서 둥글게하는거 */
+    text-align:center;
+    line-height:200px;
+    /* line-height값과 height값을 동일하게 작성하면
+    요소가 수직 중앙으로 온다(1행일 경우 가능) */
+}
+main .a {
+    /* padding(안쪽여백)추가 시 실제 크기에 변화를 주지 않는다. */
+    /* box-sizing:border-box;  *//* 이속성을 넣으면 패딩을 줘도 크기가 늘어나지않는다. 하나값말고 전체에 넣을거면 리셋파일에 넣기*/ 
+    /* padding-right: 50px; */
+    /* width:150px; */
+    float:left;
+    background-color: aqua;
+}
+main .b {
+    /* padding-top: 30px; */
+    /* width: 30px; height:170px; */
+    clear:both;
+    font-size:3rem;
+    background-color: rgb(195, 0, 255);
+}
+main .c {
+    float:left;/* 모든방향에서 내려라 */
+    padding: 10px 20px;
+    /* width: 160px; height:180px; */
+    background-color: rgb(208, 255, 0);
+}

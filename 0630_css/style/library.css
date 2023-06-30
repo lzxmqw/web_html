@@ -1,0 +1,62 @@
+header{}
+header #h_hot_bg {}
+header .h_top {}
+header  a{}
+header div{}
+header .h_btm_bg{}
+header .h_btm{}
+header .h_btm a{}
+header .h_btm img{}
+header .all_nav span{}
+#r1_bg{}
+#r1_bg .bnr_area area{}
+#r1_bg .bnr_area p{}
+#r1_bg .bnr_area h1{}
+#r1_bg form{}
+#r1_bg form legend{}
+#r1_bg form legend input{}
+#r1_bg form input{}
+#r1_bg form button{}
+#r2_bg{}
+#r2_bg a{}        
+#r3_bg .notice_wrap{}
+#r3_bg .notice_wrap h1{}
+#r3_bg .notice_wrap .right{}
+#r3_bg .notice_wrap .btm{}
+#r3_bg .notice_wrap a{}
+#r3_bg .notice_wrap span{}
+.popup_wrap .top{}
+.popup_wrap .top h1{}
+.popup_wrap .top .right{}
+.popup_wrap .btm{}
+.popup_wrap .btm img{}
+.popup_wrap .btm a{}
+.event_wrap .top{}
+.event_wrap .top h1{}
+.event_wrap .top a{}
+.event_wrap .btm{}
+.event_wrap .btm h2{}
+.event_wrap .btm p{}
+.event_wrap .event_date{}            
+#r4_bg .bk_left{}
+#r4_bg .bk_left .top{}
+#r4_bg .bk_left .top h1{}
+#r4_bg .bk_left .top a{}
+#r4_bg .bk_left .book_contents{}
+#r4_bg .bk_left .book_contents p{}
+#r4_bg .bk_left .book_contents p span{}
+#r4_bg .bk_left .book_contents img{}            
+#r4_bg .bk_right{}
+#r4_bg .bk_right h1{}
+#r4_bg .bk_right a{}            
+#r4_bg .bk_right .book_contents{}
+#r4_bg .bk_right .book_contents img{}
+#r4_bg .bk_right .book_contents em{}
+#r4_bg .bk_right .book_contents span{}
+footer{}
+footer .btm_menu{}
+footer .btm_menu a{}
+footer p{}
+footer .f_btm p{}
+footer .f_btm .txt{}
+footer .f_btm .f_logo{}
