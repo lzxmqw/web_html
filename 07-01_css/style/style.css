@@ -1,35 +1,132 @@
 /* header */
-header{background-color: red;}
-header h1{}
+header{
+    background-color:rgb(233, 255, 255);
+    width:1200px; height:92px;
+    margin:0 auto;  
+}
+header h1{
+    width:60px; height:70px;
+    float:left; margin:11px 0 0 20px;
+} /* img부모 px */
 header h1 a{}
-header h1 a img{}
-header nav{}
+header h1 a img{width:100%}
+/* img태그는 인라인요소지만 px크기를 절대값으로 가진다.
+그래서 부모요소의 크기가 변경되도 자동으로 따라오지
+않기때문에 width:100%속성으로 상대값으로 변경하여 부모의 px을 상대적으로 
+인식하게 하는 경우가 많다. */
+header nav{
+    background-color:rgb(215, 223, 217);
+    margin:39px 0 0 243px;
+    float:left; /* 이러는이유? 헤더안에서 옆으로 보내야함.  */ 
+} /* 안쪽으로 들어가는거니까 마진! */
 header nav ul{}
-header nav ul li{}
-header nav ul li a{}
-header .lib{}
-header .lib li{}
-header .lib li a{}
-/* main */
-main{background-color: rgb(0, 255, 55);}
-main .breadcrumbs_bg {}
-main .breadcrumbs_bg .breadcrumbs {} 
-main .breadcrumbs_bg .breadcrumbs a {} 
-main .breadcrumbs_bg .breadcrumbs em {} /* 빠트림 */ 
+header nav ul li{float:left;}
+header nav ul li a{padding-right: 40px; font-size:1.2rem;}
+/* 활성화 페이지 기준 active class선택자 작성위치 */
+header nav ul li:last-child a {padding-right: 0;}
+header nav ul .active a {color:#36b4e5;}
+header .lnb{
+    background-color:rgb(89, 119, 95);
+    float:right; margin:39px 20px 0 0;
+}
+header .lnb li{
+    margin-right:20px;
+    float:left;}
+    /* 모든 li에 반복적으로 들어간 margin 또는 padding값에서 
+    마지막 여백값만 빼는 방법 */
+header .lnb li:last-child {margin-right:0;}
+header .lnb li a {font-size: 1.2rem;}
+header .lnb li span{
+    width:1px; height:13px;
+    background-color:#ffdcdc;
+    display:block; margin-top: 3px;
+} /* css할때는 선이아니라 면으로 처리  */
+
+/* main */ 
+/* 특정방향에만 선이 들어갈때 border-방향:두께 모양 색상; border-left:1px solid black; */
+main{}
+main .breadcrumbs_bg {
+    background-color: rgb(125, 214, 255);
+    /* 방법1 */
+    border:1px solid #aaa;
+    border-left:0; border-right:0;
+    /* 방법2 */
+    /* border-top:1px solid #aaa; 
+    border-bottom:1px solid #aaa; */
+}
+main .breadcrumbs_bg .breadcrumbs {
+    background-color: rgb(134, 182, 146); 
+    width: 1200px; height: 58px;
+    margin:0 auto;
+    text-align: right;
+    padding:22px 18px 0 0;
+}
+/* a한테안쓰고 그 부모한테 정렬대상을 줌,이런경우는 모두 인라인이고 한 방향 
+수평 정렬일 경우 정렬대상의 부모요소한테 text-allgn을 사용한다. */
+main .breadcrumbs_bg .breadcrumbs a {
+    background-color: rgb(135, 114, 226);
+    /* width:22px; height:18px; */
+    /* margin:0px 22px 18px 0; */
+    /* margin:0 auto; */
+} 
+main .breadcrumbs_bg .breadcrumbs em {
+    background-color: rgb(210, 214, 211);
+    font-weight:700;
+} 
+/* 피그마 할때 높이설정안했으니까 높이값안주고 할거임. */ 
 /* main-contents1 경영이념 */
-main .contents1 {} 
-main .contents1 h1{} 
-main .contents1 p{} 
+main .contents1 {
+    background-color: rgb(210, 214, 211);
+    width:1200px; padding:70px 0;
+    margin:0 auto;
+    text-align:center;
+} 
+main .contents1 h1{
+    font-size:2.074rem;
+    font-weight:500;
+    letter-spacing:-0.02em;
+    margin-bottom:40px; /* =margin:0 0 40px 0; 동일한 뜻*/
+    
+} 
+main .contents1 p{
+    font-size:1.2rem;
+    letter-spacing:-0.02em;
+} 
 /* main-contents2 */
-main .c2_bg {} 
-main .c2_bg .contents2 {} 
-main .c2_bg .contents2 p {}
+main .c2_bg {background-color: aqua;} 
+main .c2_bg .contents2 {
+    background-color:aqua;
+    width:1200px; text-align:center;
+    margin:0 auto; padding:70px 0;
+} 
+main .c2_bg .contents2 p {
+    font-size:1.2rem; letter-spacing:-0.02em;
+    line-height:35px;
+}
 /* main-contents3 비전영역 */
-main .contents3 {}
-main .contents3 h2 {}
-main .contents3 h2+p {}
+main .contents3 {
+    width: 1200px; text-align: center;
+    margin: 0 auto; padding:70px 0;
+}
+main .contents3 h2 {
+    background-color: #83707d;
+    margin-bottom: 50px;
+    font-size:2.063rem;
+    font-weight: 500px;
+    letter-spacing:-0.02em;
+}
+main .contents3 h2+p {
+    background-color: #e28484;
+    font-size:1.728rem;
+    line-height: 45px;/* 행간 */
+    letter-spacing:-0.02em;/* 자간 */
+}
+main .contents3 p:nth-child(2)/* 수혈선택자 몇번째 자식을 선택할거냐  */ {
+    margin-bottom: 50px;
+}
 /* main-contents4 */
-main .c4_bg {background-color: #f1f1f1;}
+main .c4_bg {
+    background-color: #f1f1f1; margin: 0 auto; text-align: center;}
 main .c4_bg .contents4 {}
 main .c4_bg .contents4 h2 {}
 main .c4_bg .contents4 ul {}
@@ -38,14 +135,33 @@ main .c4_bg .contents4 ul li {}
 main .c4_bg .contents4 ul li h3 {}
 main .c4_bg .contents4 ul li p {}
 /* footer */
-footer {background-color: lightgray;}
-footer .f_top {background-color: coral;}
-footer .f_top .fnb {background-color: yellowgreen;}
-footer .f_top .fnb li {}
+footer {background-color: lightgray; }
+footer .f_top {
+    background-color: coral;
+    width: 1200px; height: 60px;
+    margin: 0 auto; 
+    padding-top: 13px;
+}
+footer .f_top .fnb {background-color: yellowgreen; float: left;
+    margin-top: 10px;}
+footer .f_top .fnb li {
+    float: left;
+margin-right: 30px;}
+footer .f_top .fnb li:last-child {margin-right: 0;}
 footer .f_top .fnb li a {}
 footer .f_top .site {background-color: yellow;}
-footer .f_top .site li {}
-footer .f_top .site li a {}
-footer .f_btm {background-color: skyblue;}
-footer .f_btm address {}
-footer .f_btm p {}
+footer .f_top .site li {
+    float: right; 
+    border: 1px solid #aaa;
+    margin-right: 10px;
+}
+footer .f_top .site li:last-child {margin-right: 0;}
+footer .f_top .site li a {
+    padding: 10px 20px;
+    display: block;
+}
+footer .f_btm {background-color: skyblue;
+    width: 1200px; margin: 0 auto; padding:70px 0; }
+footer .f_btm address {letter-spacing:-0.02em;
+    margin-bottom: 50px; line-height: 40px; font-size: 1.2rem;}
+footer .f_btm p {font-size:1.2rem; letter-spacing:-0.02em;}
