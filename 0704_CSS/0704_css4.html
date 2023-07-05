@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <style>
+        *{
+            margin: 0; padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        .best {
+            border:1px solid #000;
+            width: 1000px; margin:0 auto; overflow: hidden;
+        }
+        .best li {
+            background-color: aqua;
+            width: 33.3%; height: 200px; float:left; 
+            /*width에서 딱 떨어지개 하기위해서 100%기준 6개니까 33.3% */
+        }
+        .best li:nth-child(odd)/* 홀수 */ {
+            background-color: yellow;
+        } 
+    .best li:nth-child(3n)/* 3의 배수 */ {
+        border:3px solid red;
+    }
+    </style>
+    <title>0704nth</title>
+</head>
+<body>
+    <ul class="best">
+        <li>
+            <h3>상품명</h3>
+            <p class="price">10,000원</p>
+            <p class="content">상품설명</p>
+        </li>
+        <li>
+            <h3>상품명</h3>
+            <p class="price">10,000원</p>
+            <p class="content">상품설명</p>
+        </li>
+        <li>
+            <h3>상품명</h3>
+            <p class="price">10,000원</p>
+            <p class="content">상품설명</p>
+        </li>
+        <li>
+            <h3>상품명</h3>
+            <p class="price">10,000원</p>
+            <p class="content">상품설명</p>
+        </li>
+        <li>
+            <h3>상품명</h3>
+            <p class="price">10,000원</p>
+            <p class="content">상품설명</p>
+        </li>
+        <li>
+            <h3>상품명</h3>
+            <p class="price">10,000원</p>
+            <p class="content">상품설명</p>
+        </li>
+    </ul>
+</html>

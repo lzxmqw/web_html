@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <style>
+        #t,th,td  {border:1px solid; border-collapse: collapse; }
+        #t thead th:nth-child(1) {background-color: yellow;}
+        /* .b td:nth-child(2){background-color: aqua;} */
+        #t tbody tr:nth-child(1) td:nth-child(2) {
+            background-color: pink;
+        }
+        #t tbody tr:nth-child(2) td:nth-child(1) {
+            background-color: aqua;
+        }
+        #t tbody tr:nth-child(3) td:nth-child(2) {
+            background-color: lime;
+        }
+
+
+    </style>
+    <title>0704nth</title>
+</head>
+<body>
+    <table id="t">
+        <thead>
+            <tr>
+                <th scope="col">HTML5</th>
+                <th scope="col">CSS5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Header</td>
+                <td>nth-child</td>
+            </tr>
+            <tr>
+                <td>main</td>
+                <td>dispaly</td>
+            </tr>
+            <tr>
+                <td>Header</td>
+                <td>border</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
