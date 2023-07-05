@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>test</title>
+    <style>
+        /* 내부 스타일시트 */
+        /* #a {color:green;} */
+        /* CSS 우선순위의 차이, (클래스, 아이디, 태그, 인라인),
+        동일한 순위일 경우 무엇을 기준으로 순위가 정해지는가? */
+        /* 우선순위 순서
+        1.인라인
+        2.아이디
+        3.클래스
+        4.태그  */
+        
+        .b {color:blue;} /* class */
+        h1 {color:pink;} /* class */
+        #c {color:red;}/* id */
+        article { 
+            /* layout css - 크기, 정렬(+여백) */
+            width:543px;
+            background-color:blue
+        } 
+        article h1 {}
+        article p {}
+
+        /* float연습 */
+        /* 조건1. 같은 부모 안 형제 요소가 2개일 때 */
+        /* 조건2. (위)형제 2개 이상을 좌우 배치가 필요할 때 */
+        * {margin:0; padding:0; box-sizing:border-box;}
+        #define { /* 부모 */
+            background-color: aqua;
+            width:543px; margin:50px auto 0; /* marjin에서  */
+            /* overflow:hidden; */
+
+        }
+        #define::after/* 가상선택자 */{clear:both; display: block; content:'';}
+        #define dt{float:left; width:50%} /* 형제1 */ /* width: 크기가 너무 커서 줄이는 용도로 사용하기도한다. */
+        #define dd{float:right; width:50%} /* 형제2 */
+        /* 수열선택자 이용 형제 색상 구분 */
+        #define dt:nth-child(1) {background-color:lime;} /* 제목1 */
+        #define dt:nth-child(3) {background-color:coral;} /* 제목2 */ /* 차일드가 왜 3인가? -> 두번째 dt가 세번째칸에 위치했기떄문에 (3)이 들어간다. */
+        #define dd:nth-child(2) {background-color:yellow;} /* 내용1 */
+        #define dd:nth-child(4) {background-color:pink;} /* 내용2 */
+
+        figure{
+            background-color: aquamarine;
+            width: 543; margin: 0 auto;
+            overflow: hidden;
+        }
+        figure img{width:150px; float: left;}
+        figure figcaption{
+            float: right;}
+        /* float 부유특징에 따른 문제해결 */
+        /* 부모요소의 H값이 없으면 부모는
+        자식만큼 크기를 인식한다.
+        그러나 자식이 float를 가지면 부모에서 
+        벗어나는 특징때문에 부모가 자식만큼의
+        크기를 못가지고 H  0이 되는 문제가 발생한다. */
+        /* 해결방법 */
+        /* 
+        1. 가출한 float자식 잡기 
+            부모요소에 overflow:hidden 명령(영역재인식)
+        2. 새로운 자식 입양하기
+            부모요소에 가상 요소(입양) 삽입
+            부모::after{
+                clear:both; content:''; display:block;
+            }
+        3. 강제높이설정(추천x)
+            부모요소에 강제 높이값 설정 height px
+        */
+        footer{
+            width:700px; margin: 0 auto;
+            background-color: lightgray;
+            text-align: right;
+            
+        }
+        footer span{
+            width: 100px; height:100px; 
+            border-radius:50%;
+            display:inline-block;
+            line-height: 100px; /* 한줄일때만 가능함. */
+            text-align: center;
+            /* inline-block특징 (사이 여백이 생김)*/ 
+            /* 1. inline특징 옆으로 정렬된다. 
+            2. block의 크기와 여백을 가진다.
+            3. inline과 block에 들어가는 css를 거의 모두 가질 수 있다. 
+            */
+            margin-left: -6px;
+        }
+        footer span:nth-child(1){background-color: red; }
+        footer span:nth-child(2){background-color: green;}
+        footer span:nth-child(3){background-color: blue;}
+        footer span:nth-child(4){background-color: hotpink;}
+
+</style>
+</head>
+<body>
+    <h1 class="b c" id="a">제목</h1> <!-- style= inline style sheet -->
+    <article><!-- 뉴스, 블로그 페이지 내 독립영역 틀 -->
+        <h1>제목</h1>
+        <p>내용</p>
+    </article>
+    <dl id="define">
+        <dt>제목1</dt>
+        <dd>내용1</dd>
+        <dt>제목2</dt>
+        <dd>내용2</dd>
+    </dl>
+    <figure>
+        <img src="./img/spc-logo.png" alt="">
+        <figcaption>삼립 로고 이미지</figcaption>
+    </figure>
+    <footer>
+        <span>span1</span>
+        <span>span2</span>
+        <span>span3</span>
+        <span>span4</span>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,17 @@
+/* 1.선택자작성 */
+/* 2.배경색 영역 구분 */
+/* 3.figma비교-css작성 */
+
+header {}
+header h1{}
+header h1 a{}
+header h1 a img{}
+header nav{}
+header nav ul .active{}
+header nav ul li{}
+header nav ul li a{}
+header .lnb{}
+header .lnb{}
+header .lnb li{}
+header .lnb a{}
+header .lnb span{}
