@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="./style/reset.css">
+    <title>hnt</title>
+    <style>
+        div {height: 300px;}
+        .bg1 {
+            background:linear-gradient(-60deg, pink,skyblue,beige); /* 직선 그라이언티*/
+            /* background:radial-gradient(pink,skyblue,beige);  *//* 원형 그라이언티 */
+        }
+        .bg2 {background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(221,148,233,1) 100%);}
+        .bg3 {}
+        .bg4 {
+            background:url(https://picsum.photos/20/1920)
+        }
+        .bg4 .gra {
+            background: rgb(82,82,82);
+            background: radial-gradient(circle, rgba(82,82,82,1) 0%, rgba(255,255,255,0) 100%);
+        }
+        .bg5 {}
+    </style>
+</head>
+<body>
+    <!-- 포토샵, 일러스트레이터 = graident=정적인 색상 -->
+    <!-- CSS = graident=동적 색상(애니메이션) -->
+    <!-- gradient animation CSS -->
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+    <div class="bg3"></div>
+    <div class="bg4">
+        <div class="gra"></div>
+    </div>
+    <div class="bg5"></div>
+</body>
+</html>
